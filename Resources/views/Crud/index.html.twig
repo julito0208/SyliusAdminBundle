@@ -9,17 +9,25 @@
 {% block title %}{{ header|trans }} {{ parent() }}{% endblock %}
 
 {% block content %}
-    {{ sylius_template_event([event_prefix, 'sylius.admin.index'], _context) }}
+{{ sonata_block_render_event(event_prefix ~ '.before_header', {'resources': resources}) }}
+
+{% include '@SyliusAdmin/Crud/Index/_header.html.twig' %}
+
+{{ sonata_block_render_event(event_prefix ~ '.after_header', {'resources': resources}) }}
+
+{% include '@SyliusAdmin/Crud/Index/_content.html.twig' %}
+
+{{ sonata_block_render_event(event_prefix ~ '.after_content', {'resources': resources}) }}
 {% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
 
-    {{ sylius_template_event([event_prefix ~ '.stylesheets', 'sylius.admin.index.stylesheets'], { 'metadata': metadata }) }}
+    {{ sonata_block_render_event(event_prefix ~ '.stylesheets') }}
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
 
-    {{ sylius_template_event([event_prefix ~ '.javascripts', 'sylius.admin.index.javascripts'], { 'metadata': metadata }) }}
+    {{ sonata_block_render_event(event_prefix ~ '.javascripts') }}
 {% endblock %}

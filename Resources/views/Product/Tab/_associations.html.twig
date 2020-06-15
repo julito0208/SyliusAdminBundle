@@ -23,6 +23,6 @@
             </div>
         {% endfor %}
 
-        {{ sylius_template_event(['sylius.admin.product.' ~ action ~ '.tab_associations', 'sylius.admin.product.tab_associations'], {'form': form}) }}
+        {{ sonata_block_render_event('sylius.admin.product.' ~ action ~ '.tab_associations', {'form': form}) }}
     </div>
 </div>

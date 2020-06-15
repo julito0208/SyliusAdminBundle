@@ -2,7 +2,7 @@
 <input type="hidden" name="_method" value="PUT">
 <div class="ui inline fields" style="margin: 0">
     {{ form_widget(form.tracking, {'attr': {'placeholder': 'sylius.ui.tracking_code'|trans ~ '...'}}) }}
-    <button type="submit" class="ui labeled icon teal button"><i class="plane icon"></i> {{ 'sylius.ui.ship'|trans }}</button>
+    <button type="submit" class="ui labeled icon primary button"><i class="plane icon"></i> {{ 'sylius.ui.ship'|trans }}</button>
 </div>
 {{ form_row(form._token) }}
 {{ form_end(form, {'render_rest': false}) }}

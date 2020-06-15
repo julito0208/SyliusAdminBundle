@@ -3,10 +3,10 @@
 <div class="ui grid">
     <div class="center aligned doubling four column row">
         <div class="column">
-            <div class="ui red segment">
+            <div class="ui primary segment">
                 <div class="ui small statistic">
                     <div id="total-sales" class="value" style="padding-bottom: 10px;">
-                        {{ money.format(statistics.totalSales, channel.baseCurrency.code) }}
+                        $553.120,76
                     </div>
                     <div class="label">
                         {{ 'sylius.ui.sales'|trans }}
@@ -15,22 +15,22 @@
             </div>
         </div>
         <div class="column">
-            <div class="ui yellow segment">
+            <div class="ui primary segment">
                 <div class="ui small statistic">
                     <div id="new-orders" class="value" style="padding-bottom: 10px;">
-                        {{ statistics.numberOfNewOrders }}
+                        190
                     </div>
                     <div class="label">
-                        {{ 'sylius.ui.paid_orders'|trans }}
+                        {{ 'sylius.ui.fulfilled_orders'|trans }}
                     </div>
                 </div>
             </div>
         </div>
         <div class="column">
-            <div class="ui blue segment">
+            <div class="ui primary segment">
                 <div class="ui small statistic">
                     <div id="new-customers" class="value" style="padding-bottom: 10px;">
-                        {{ statistics.numberOfNewCustomers }}
+                        113
                     </div>
                     <div class="label">
                         {{ 'sylius.ui.customers'|trans }}
@@ -39,10 +39,10 @@
             </div>
         </div>
         <div class="column">
-            <div class="ui green segment">
+            <div class="ui primary segment">
                 <div class="ui small statistic">
                     <div id="average-order-value" class="value" style="padding-bottom: 10px;">
-                        {{ money.format(statistics.averageOrderValue, channel.baseCurrency.code) }}
+                        $2.178,23
                     </div>
                     <div class="label">
                         {{ 'sylius.ui.average_order_value'|trans }}
